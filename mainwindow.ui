@@ -72,11 +72,22 @@
     <property name="title">
      <string>帮助(&amp;H)</string>
     </property>
+    <addaction name="actionAbout"/>
    </widget>
    <widget class="QMenu" name="menu_E">
     <property name="title">
      <string>编辑(&amp;E)</string>
     </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="separator"/>
+    <addaction name="actionFind"/>
+    <addaction name="actionReplace"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelectAll"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_E"/>
@@ -411,6 +422,17 @@
    </property>
    <property name="toolTip">
     <string>显示行数</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+   <property name="toolTip">
+    <string>关于</string>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::NoRole</enum>

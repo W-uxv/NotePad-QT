@@ -16,5 +16,6 @@
         <file>img/statusBar.png</file>
         <file>img/toolBar.png</file>
         <file>img/turnLine.png</file>
+        <file>img/logo.png</file>
     </qresource>
 </RCC>
