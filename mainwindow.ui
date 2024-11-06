@@ -293,8 +293,7 @@
   </action>
   <action name="actionReplace">
    <property name="icon">
-    <iconset resource="notepad.qrc">
-     <normaloff>:/img/replace.png</normaloff>:/img/replace.png</iconset>
+    <iconset theme="QIcon::ThemeIcon::MediaPlaylistRepeat"/>
    </property>
    <property name="text">
     <string>替换(&amp;R)</string>
@@ -311,8 +310,7 @@
   </action>
   <action name="actionFont">
    <property name="icon">
-    <iconset resource="notepad.qrc">
-     <normaloff>:/img/font.png</normaloff>:/img/font.png</iconset>
+    <iconset theme="QIcon::ThemeIcon::ToolsCheckSpelling"/>
    </property>
    <property name="text">
     <string>字体(&amp;F)</string>
@@ -329,8 +327,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="notepad.qrc">
-     <normaloff>:/img/turnLine.png</normaloff>:/img/turnLine.png</iconset>
+    <iconset theme="QIcon::ThemeIcon::GoDown"/>
    </property>
    <property name="text">
     <string>自动换行(&amp;W)</string>
@@ -414,7 +411,7 @@
   </action>
   <action name="actionShowLineNumber">
    <property name="icon">
-    <iconset resource="notepad.qrc">
+    <iconset theme="QIcon::ThemeIcon::DocumentSend" resource="notepad.qrc">
      <normaloff>:/img/showLine.png</normaloff>:/img/showLine.png</iconset>
    </property>
    <property name="text">
@@ -428,6 +425,9 @@
    </property>
   </action>
   <action name="actionAbout">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::HelpAbout"/>
+   </property>
    <property name="text">
     <string>关于(&amp;A)</string>
    </property>
