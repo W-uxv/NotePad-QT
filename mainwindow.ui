@@ -59,6 +59,13 @@
     <property name="title">
      <string>格式(&amp;O)</string>
     </property>
+    <addaction name="actionLineWrap"/>
+    <addaction name="actionShowLineNumber"/>
+    <addaction name="actionFont"/>
+    <addaction name="separator"/>
+    <addaction name="actionFontColor"/>
+    <addaction name="actionBackgroundColor"/>
+    <addaction name="actionFontBackgroundColor"/>
    </widget>
    <widget class="QMenu" name="menu_V">
     <property name="title">
@@ -415,10 +422,13 @@
      <normaloff>:/img/showLine.png</normaloff>:/img/showLine.png</iconset>
    </property>
    <property name="text">
-    <string>显示行数</string>
+    <string>显示行数(&amp;L)</string>
    </property>
    <property name="toolTip">
     <string>显示行数</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::NoRole</enum>
@@ -433,6 +443,39 @@
    </property>
    <property name="toolTip">
     <string>关于</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionFontColor">
+   <property name="text">
+    <string>字体颜色</string>
+   </property>
+   <property name="toolTip">
+    <string>设置字体颜色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionBackgroundColor">
+   <property name="text">
+    <string>字体背景色</string>
+   </property>
+   <property name="toolTip">
+    <string>设置字体背景色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionFontBackgroundColor">
+   <property name="text">
+    <string>编辑器背景色</string>
+   </property>
+   <property name="toolTip">
+    <string>编辑器背景色</string>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::NoRole</enum>
