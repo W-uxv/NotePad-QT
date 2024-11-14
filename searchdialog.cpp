@@ -20,6 +20,8 @@ void SearchDialog::on_btFindNext_clicked()
 {
     QString target = ui->searchText->text();
 
+    if(target == "" || pTextEdit == nullptr) return;
+
     QString text = pTextEdit->toPlainText();
     QTextCursor c = pTextEdit->textCursor();
     int index = -1;

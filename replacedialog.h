@@ -13,12 +13,22 @@ class ReplaceDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit ReplaceDialog(QWidget *parent = nullptr);
+    explicit ReplaceDialog(QWidget *parent = nullptr,QPlainTextEdit *textEdit=nullptr);
     ~ReplaceDialog();
+
+private slots:
+    void on_btReplace_clicked();
+
+    void on_btReplaceAll_clicked();
+
+    void on_btCancel_clicked();
+
+    void on_btFIndNext_clicked();
 
 private:
     Ui::ReplaceDialog *ui;
 
+    QPlainTextEdit *pTextEdit;
 };
 
 #endif // REPLACEDIALOG_H
