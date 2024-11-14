@@ -46,6 +46,9 @@ MainWindow::MainWindow(QWidget *parent)
 
         ui->actionLineWrap->setChecked(true);
     }
+
+    ui->actionToolBar->setChecked(true);
+    ui->actionstatusBar->setChecked(true);
 }
 
 MainWindow::~MainWindow()
@@ -63,7 +66,7 @@ void MainWindow::on_actionAbout_triggered()
 
 void MainWindow::on_actionFind_triggered()
 {
-    SearchDialog dlg;
+    SearchDialog dlg(this, ui->textEdit);
     dlg.exec();
 }
 
@@ -302,5 +305,33 @@ void MainWindow::on_actionFont_triggered()
     QFont font = QFontDialog::getFont(&ok,this);
 
     if(ok) ui->textEdit->setFont(font);
+}
+
+
+void MainWindow::on_actionToolBar_triggered()
+{
+    bool visiable = ui->toolBar->isVisible();
+    ui->toolBar->setVisible(!visiable);
+    ui->actionToolBar->setChecked(!visiable);
+}
+
+
+void MainWindow::on_actionstatusBar_triggered()
+{
+    bool visiable = ui->statusbar->isVisible();
+    ui->statusbar->setVisible(!visiable);
+    ui->actionstatusBar->setChecked(!visiable);
+}
+
+
+void MainWindow::on_actionSelectAll_triggered()
+{
+    ui->textEdit->selectAll();
+}
+
+
+void MainWindow::on_actionExit_triggered()
+{
+    if(userEditConfirmed()) exit(0);
 }
 
